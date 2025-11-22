@@ -1,22 +1,7 @@
-'use client'
-
-import { useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 export default function SuccessPage() {
-  const searchParams = useSearchParams()
-  const reference = searchParams.get('reference')
-
-  useEffect(() => {
-    if (reference) {
-      // Verify payment on client side (optional - webhook is primary)
-      fetch(`/api/webhook/paystack?reference=${reference}`)
-        .catch(console.error)
-    }
-  }, [reference])
-
   return (
     <div className="container mx-auto px-4 py-12 text-center">
       <div className="max-w-md mx-auto">
@@ -27,8 +12,8 @@ export default function SuccessPage() {
         </div>
         <h1 className="text-3xl font-bold mb-4">Payment Successful!</h1>
         <p className="text-gray-600 mb-6">
-          Thank you for your purchase. Your payment has been processed successfully.
-          {reference && <span className="block text-sm mt-2">Reference: {reference}</span>}
+          Thank you for your purchase. Your order has been processed successfully.
+          This is a demo - no real payment was processed.
         </p>
         <div className="space-y-3">
           <Button asChild className="w-full">
