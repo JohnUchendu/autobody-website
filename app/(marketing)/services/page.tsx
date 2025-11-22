@@ -1,5 +1,5 @@
 import { mockProducts } from '@/lib/mock-data'
-import { Button } from '@/components/ui/button'
+
 import { formatPrice } from '@/lib/utils'
 import { AddToCartButton } from '@/components/cart/AddToCartButton'
 

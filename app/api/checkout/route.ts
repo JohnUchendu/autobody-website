@@ -1,9 +1,30 @@
 import { NextResponse } from 'next/server'
 import { initializeTransaction } from '@/lib/paystack'
 
+interface CartItem {
+  product: {
+    name: string
+    price: number
+  }
+  quantity: number
+}
+
+interface Customer {
+  firstName: string
+  lastName: string
+}
+
+interface CheckoutRequestBody {
+  email: string
+  amount: number
+  reference: string
+  items: CartItem[]
+  customer: Customer
+}
+
 export async function POST(request: Request) {
   try {
-    const body = await request.json()
+    const body: CheckoutRequestBody = await request.json()
     const { email, amount, reference, items, customer } = body
 
     if (!email || !amount || amount <= 0) {
@@ -32,7 +53,7 @@ export async function POST(request: Request) {
         {
           display_name: "Items",
           variable_name: "items",
-          value: JSON.stringify(items.map((item: any) => ({
+          value: JSON.stringify(items.map((item: CartItem) => ({
             product: item.product.name,
             quantity: item.quantity,
             price: item.product.price

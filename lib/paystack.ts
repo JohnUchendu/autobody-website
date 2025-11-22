@@ -16,15 +16,31 @@ export interface VerifyTransactionResponse {
     currency: string
     status: 'success' | 'failed' | 'abandoned'
     reference: string
-    metadata: any
+    metadata: {
+      custom_fields: Array<{
+        display_name: string
+        variable_name: string
+        value: string
+      }>
+      referrer?: string
+    }
   }
+}
+
+export interface PaymentMetadata {
+  custom_fields?: Array<{
+    display_name: string
+    variable_name: string
+    value: string
+  }>
+  referrer?: string
 }
 
 export async function initializeTransaction(
   email: string,
   amount: number,
   reference: string,
-  metadata?: any
+  metadata?: PaymentMetadata
 ): Promise<InitializeTransactionResponse> {
   const response = await fetch('https://api.paystack.co/transaction/initialize', {
     method: 'POST',

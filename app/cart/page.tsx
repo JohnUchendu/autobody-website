@@ -34,13 +34,10 @@ export default function CartPage() {
         <div className="lg:col-span-2 space-y-4">
           {items.map((item) => (
             <div key={item.product._id} className="flex items-center space-x-4 bg-white p-4 rounded-lg border">
-              {item.product.images && item.product.images[0] && (
-                <img
-                  src={item.product.images[0].url}
-                  alt={item.product.name}
-                  className="w-20 h-20 object-cover rounded"
-                />
-              )}
+              {/* Replace img with placeholder div */}
+              <div className="w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded flex items-center justify-center">
+                <span className="text-2xl">🧴</span>
+              </div>
               <div className="flex-1">
                 <h3 className="font-semibold">{item.product.name}</h3>
                 <p className="text-blue-600 font-semibold">{formatPrice(item.product.price)}</p>

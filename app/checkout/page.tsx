@@ -5,6 +5,7 @@ import { useCart } from '@/hooks/use-cart'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { formatPrice } from '@/lib/utils'
+import Link from 'next/link' // Add this import
 
 export default function CheckoutPage() {
   const { items, getTotalPrice, clearCart } = useCart()
@@ -36,7 +37,7 @@ export default function CheckoutPage() {
         <h1 className="text-3xl font-bold mb-4">Checkout</h1>
         <p className="text-gray-600 mb-8">Your cart is empty</p>
         <Button asChild>
-          <a href="/products">Continue Shopping</a>
+          <Link href="/products">Continue Shopping</Link> {/* Fixed: Changed <a> to <Link> */}
         </Button>
       </div>
     )
