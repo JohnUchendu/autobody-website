@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
@@ -40,13 +40,22 @@ export function Footer() {
             </ul>
           </div>
 
+<div>
+    <h3 className="font-semibold mb-4">Legal</h3>
+    <ul className="space-y-2 text-gray-400">
+      <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+      <li><Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link></li>
+      <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+    </ul>
+  </div>
+
           {/* Contact */}
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <address className="not-italic text-gray-400 space-y-2">
               <p>123 Automotive Street</p>
-              <p>Lagos, Nigeria</p>
-              <p>+234 812 345 6789</p>
+              <p>PH, Nigeria</p>
+              <p>+234 812 000 5000</p>
               <p>info@autoelite.com</p>
             </address>
           </div>

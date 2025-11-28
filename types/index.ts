@@ -7,6 +7,13 @@ export interface Product {
   images: string[]
   category: string
   inStock: boolean
+  // Add these new properties
+  isBestSeller?: boolean
+  isNew?: boolean
+  features?: string[]
+  originalPrice?: number
+  freeShipping?: boolean
+  warranty?: string | boolean
 }
 
 export interface Service {

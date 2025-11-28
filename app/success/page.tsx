@@ -17,7 +17,7 @@ export default function SuccessPage() {
         </p>
         <div className="space-y-3">
           <Button asChild className="w-full">
-            <Link href="/products">Continue Shopping</Link>
+            <Link href="/shop">Continue Shopping</Link>
           </Button>
           <Button asChild variant="outline" className="w-full">
             <Link href="/">Back to Home</Link>

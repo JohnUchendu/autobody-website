@@ -7,9 +7,14 @@ export const mockProducts: Product[] = [
     description: 'High-quality car wax for ultimate shine and protection against UV rays and environmental contaminants.',
     price: 15000,
     slug: 'premium-car-wax',
-    images: ['/images/products/wax.jpg'],
+    images: ['/images/products/car-wax.jpg'],
     category: 'detailing',
-    inStock: true
+    inStock: true,
+    isBestSeller: true,
+    features: ['UV Protection', 'Water Repellent', 'Easy Application', 'Long Lasting'],
+    originalPrice: 18000,
+    freeShipping: true,
+    warranty: '1 year'
   },
   {
     _id: '2',
@@ -19,7 +24,12 @@ export const mockProducts: Product[] = [
     slug: 'interior-cleaner-kit',
     images: ['/images/products/interior-cleaner.jpg'],
     category: 'cleaning',
-    inStock: true
+    inStock: true,
+    isNew: true,
+    features: ['Leather Safe', 'Multi-surface', 'Non-toxic', 'Quick Drying'],
+    originalPrice: 9500,
+    freeShipping: false,
+    warranty: '6 months'
   },
   {
     _id: '3',
@@ -29,7 +39,12 @@ export const mockProducts: Product[] = [
     slug: 'ceramic-coating',
     images: ['/images/products/ceramic-coating.jpg'],
     category: 'protection',
-    inStock: true
+    inStock: true,
+    isBestSeller: true,
+    features: ['9H Hardness', 'Hydrophobic', 'UV Protection', '5-Year Durability'],
+    originalPrice: 52000,
+    freeShipping: true,
+    warranty: '5 years'
   },
   {
     _id: '4',
@@ -39,7 +54,11 @@ export const mockProducts: Product[] = [
     slug: 'wheel-cleaner',
     images: ['/images/products/wheel-cleaner.jpg'],
     category: 'cleaning',
-    inStock: true
+    inStock: true,
+    features: ['Brake Dust Removal', 'Alloy Safe', 'Non-acidic', 'Easy Rinse'],
+    originalPrice: 7500,
+    freeShipping: false,
+    warranty: '1 year'
   },
   {
     _id: '5',
@@ -49,7 +68,12 @@ export const mockProducts: Product[] = [
     slug: 'headlight-restoration-kit',
     images: ['/images/products/headlight-kit.jpg'],
     category: 'restoration',
-    inStock: true
+    inStock: true,
+    isNew: true,
+    features: ['UV Protective Coat', 'Clear Lens', 'Easy Application', 'Professional Results'],
+    originalPrice: 15000,
+    freeShipping: true,
+    warranty: '2 years'
   },
   {
     _id: '6',
@@ -59,7 +83,40 @@ export const mockProducts: Product[] = [
     slug: 'paint-touch-up-pen',
     images: ['/images/products/touch-up-pen.jpg'],
     category: 'paint',
-    inStock: true
+    inStock: true,
+    features: ['Factory Matched', 'Easy to Use', 'Quick Dry', 'Precise Application'],
+    originalPrice: 4500,
+    freeShipping: false,
+    warranty: '6 months'
+  },
+  {
+    _id: '7',
+    name: 'Leather Conditioner',
+    description: 'Premium leather conditioner to prevent cracking and maintain softness.',
+    price: 9500,
+    slug: 'leather-conditioner',
+    images: ['/images/products/leather-conditioner.jpg'],
+    category: 'interior',
+    inStock: true,
+    features: ['Prevents Cracking', 'UV Protection', 'Non-greasy', 'Pleasant Scent'],
+    originalPrice: 11000,
+    freeShipping: false,
+    warranty: '1 year'
+  },
+  {
+    _id: '8',
+    name: 'Car Cover',
+    description: 'All-weather car cover with soft inner lining to protect your vehicle.',
+    price: 28000,
+    slug: 'car-cover',
+    images: ['/images/products/car-cover.jpg'],
+    category: 'protection',
+    inStock: true,
+    isBestSeller: true,
+    features: ['All-Weather', 'UV Protected', 'Breathable', 'Custom Fit'],
+    originalPrice: 35000,
+    freeShipping: true,
+    warranty: '2 years'
   }
 ]
 
